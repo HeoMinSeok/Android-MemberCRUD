@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@android:color/background_light">
+    <RelativeLayout
+        android:id="@+id/list_header"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#2593FF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:gravity="top"
+                android:text="상세보기"
+                android:textColor="#ffffff"
+                android:textFontWeight="900"
+                android:textSize="35dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list_header">
+
+        <!-- 이름 필드 레이아웃 -->
+        <LinearLayout
+            android:id="@+id/layoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edittext_bg">
+
+            <!-- 이름 제목 -->
+            <TextView
+                android:id="@+id/labelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름"
+                android:textSize="24sp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@android:color/black"
+                tools:text="이름" />
+
+            <!-- 이름 필드 -->
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="홍길동"
+                android:textSize="24sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@android:color/black"
+                tools:text="홍길동" />
+
+        </LinearLayout>
+
+        <!-- 나이 필드 레이아웃 -->
+        <LinearLayout
+            android:id="@+id/layoutAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/layoutName"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edittext_bg">
+
+            <!-- 나이 제목 -->
+            <TextView
+                android:id="@+id/labelAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나이"
+                android:textSize="24sp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@android:color/black"
+                tools:text="나이" />
+
+            <!-- 나이 필드 -->
+            <TextView
+                android:id="@+id/textAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="30"
+                android:textSize="24sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@android:color/black"
+                tools:text="30" />
+
+        </LinearLayout>
+
+        <!-- 번호 필드 레이아웃 -->
+        <LinearLayout
+            android:id="@+id/layoutMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/layoutAge"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edittext_bg">
+
+            <!-- 번호 제목 -->
+            <TextView
+                android:id="@+id/labelMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="번호"
+                android:textSize="24sp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@android:color/black"
+                tools:text="번호" />
+
+            <!-- 번호 필드 -->
+            <TextView
+                android:id="@+id/textMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="010-1234-5678"
+                android:textSize="24sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@android:color/black"
+                tools:text="010-1234-5678" />
+
+        </LinearLayout>
+
+        <!-- 수정 버튼 -->
+        <Button
+            android:id="@+id/updateMember"
+            android:text="수정"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutMobile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#2593FF"
+            android:textColor="@android:color/white" />
+
+        <!-- 삭제 버튼 -->
+        <Button
+            android:id="@+id/deleteMember"
+            android:text="삭제"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutMobile"
+            android:layout_toStartOf="@+id/updateMember"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#2593FF"
+            android:textColor="@android:color/white" />
+
+        <!-- 목록 버튼 -->
+        <Button
+            android:id="@+id/listMember"
+            android:text="목록"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutMobile"
+            android:layout_toEndOf="@+id/updateMember"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#2593FF"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+
+    <!-- 하단 네비게시션 레이아웃 -->
+    <RelativeLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/navbar">
+
+        <RelativeLayout
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/black_arrow_left" />
+
+            <ImageView
+                android:id="@+id/homeBtn"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginLeft="132dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/home_btn" />
+
+            <ImageView
+                android:id="@+id/listBtn"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/list" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
